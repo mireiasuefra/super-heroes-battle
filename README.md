@@ -1,5 +1,5 @@
-# My React Starter Kit ✨
+# 🤜🏼 Batalla entre Super Heroes 🤛🏼
 
-- Sass dependency
-- `npm run githubpages`
-- Services: API and local storage
+- 
+- 
+- 
