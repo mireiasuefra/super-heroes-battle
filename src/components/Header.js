@@ -4,8 +4,8 @@
 function Header() {
     return (
       <header className="header">
-        <img className="header__img" src="{logoHeader}" alt="logo"></img>
-        <p>hola mundo</p>
+       {/* <img className="header__img" src="{logoHeader}" alt="logo"></img> */}
+        <p>header</p>
       </header>
     );
   }

@@ -16,7 +16,7 @@ function App() {
   return (
     // HTML ✨
 
-    <div className="">
+    <div className="bg-page">
       <Header />
       <main>
         <Switch>
