@@ -1,7 +1,13 @@
-.bg-page {
+.landImg {
   background-color: rgb(155, 236, 166);
   height: 100%;
   min-height: 100vh;
+
+
+
+  &__img {
+    height: 100%;
+    min-height: 100vh;
+
+  }
 }
-
-
