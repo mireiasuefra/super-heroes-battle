@@ -29,7 +29,7 @@ function App() {
           </Route>
 
           <Route path="/super-heroes">
-            <SuperHeroesPage />
+            <SuperHeroesPage/>
           </Route>
 
           <Route path="/super-hero/:id">

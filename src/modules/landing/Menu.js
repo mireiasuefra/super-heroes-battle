@@ -1,15 +1,14 @@
+import { Link } from "react-router-dom";
+
 function Menu() {
   return (
     <div className="menu">
-      <a className="menu__battle" href="http://localhost:3000/#/battle">
+      <Link className="menu__battle" to="/battle">
         Batalla
-      </a>
-      <a
-        className="menu__super-heroes"
-        href="http://localhost:3000/#/super-heroes"
-      >
-        Súper Héroes
-      </a>
+      </Link>
+      <Link className="menu__super-heroes" to="/super-heroes">
+      Súper Héroes
+      </Link>
     </div>
   );
 }

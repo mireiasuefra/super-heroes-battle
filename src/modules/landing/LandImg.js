@@ -2,9 +2,9 @@ import imageLanding from "../../images/img-landing.jpg";
 
 function Land() {
   return (
-    <div className="landImg">
+    <div className="landing">
       <img
-        className="landImg__img"
+        className="landing__img"
         src={imageLanding}
         alt="imagen landing"
       ></img>

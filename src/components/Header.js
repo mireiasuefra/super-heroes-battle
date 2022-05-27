@@ -1,13 +1,14 @@
-//import logoHeader from "meter aqui ruta de imagen que quiera poner"
+import logoHeader from "../images/logo-header.JPG"
 
 
 function Header() {
     return (
       <header className="header">
-       {/* <img className="header__img" src="{logoHeader}" alt="logo"></img> */}
-        <p>header</p>
+      <img className="header__img" src={logoHeader} alt="logo"></img>
       </header>
     );
   }
+
+
   
   export default Header;

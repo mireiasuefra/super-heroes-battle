@@ -1,5 +1,12 @@
 .header {
     display: flex;
     justify-content: center;
+    background-color:$color-terciary;
+
+    &__img{
+        max-width: 500px;
+        min-width: 100px;
+        width: 90%;
+    }
 
 }
