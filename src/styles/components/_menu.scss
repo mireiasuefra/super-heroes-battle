@@ -1,26 +1,25 @@
 .menu {
     display: flex;
-    justify-content:space-around;
-    background-color:$color-terciary;
-    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-terciary;
     min-width: 100px;
 
-
-  
-    &__battle{
-        text-decoration: none;
-        color: $color-secondary;
-        cursor: pointer;
-        
-
-
+    @media (min-width: $breakpoint-tablet) {
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-    &__super-heroes{
-        text-decoration: none;
-        color: $color-secondary;
+    &__item {
         cursor: pointer;
+        margin-top: 20px;
 
+        & a {
+            text-decoration: none;
+            color: $color-secondary;
+            &:hover {
+                border-bottom: 2px solid $color-secondary;
+            }
+        }
     }
-
 }

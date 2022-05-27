@@ -2,14 +2,16 @@ import { Link } from "react-router-dom";
 
 function Menu() {
   return (
-    <div className="menu">
-      <Link className="menu__battle" to="/battle">
-        Batalla
-      </Link>
-      <Link className="menu__super-heroes" to="/super-heroes">
-      Súper Héroes
-      </Link>
-    </div>
+    <nav>
+      <ul className="menu">
+        <li className="menu__item">
+          <Link to="/battle">Batalla</Link>
+        </li>
+        <li className="menu__item">
+          <Link to="/super-heroes">Súper Héroes</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 

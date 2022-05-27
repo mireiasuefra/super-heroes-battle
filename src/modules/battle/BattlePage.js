@@ -1,13 +1,15 @@
+import Menu from "../landing/Menu";
+
 function BattlePage() {
   return (
     <div>
-        Página Battle
-     {/*
+      <Menu />
+      Página Battle
+      {/*
       <Fight />
       <Hit />
       <Counter />
-     */
-     }
+     */}
     </div>
   );
 }

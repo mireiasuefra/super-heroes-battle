@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import ls from '../../services/localstorage';
+import ls from "../../services/localstorage";
 import callToApi from "../../services/api-list";
+import Menu from "../landing/Menu";
 
 //import FilterNameSuperHero from "./FilterNameSuperHero";
 //import FilterGenderSuperHero from "./FilterGenderSuperHero";
@@ -8,22 +9,19 @@ import callToApi from "../../services/api-list";
 //import ButtonReset from "./ButtonReset";
 import ListSuperHero from "./ListSuperHero";
 
-
 function SuperHeroesPage() {
-
-  // Variables ESTADO: 
+  // Variables ESTADO:
 
   const [superHeros, setSuperHeros] = useState(ls.get("superHero", []));
 
   // Llamada a la API:
   useEffect(() => {
-    callToApi()
-    .then((response) => {
+    callToApi().then((response) => {
       setSuperHeros(response);
     });
     //cada vez que cambia la variable filterHouseCharacters se ejecuta lo que hay dentro del useEffect: la llamada a la api, utilizando el  filterHouseCharacters como parámetro
   }, []);
-  
+
   /*
   const [filterNameSuperHero, setFilterNameSuperHero] = useState(
     ls.get("filterSuperHero", "")
@@ -75,10 +73,8 @@ function SuperHeroesPage() {
 
       </form>
   */}
-      <ListSuperHero 
-        superHeros={superHeros}
-      />
-    
+      <Menu />
+      <ListSuperHero superHeros={superHeros} />
     </div>
   );
 }

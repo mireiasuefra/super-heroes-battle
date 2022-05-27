@@ -10,7 +10,7 @@ function Land() {
       ></img>
       <p className="landing__text">
         Aquí podrás conocer que super héroe es mas fuerte, mas inteligente, etc.
-        Lo puedes hacer haciendo que peleen o viendo la lista de super héroes.
+        Lo puedes comprobar haciendo que peleen o viendo la lista de super héroes.
       </p>
     </div>
   );
