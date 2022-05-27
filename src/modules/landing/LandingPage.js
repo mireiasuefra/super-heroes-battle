@@ -1,19 +1,13 @@
 import LandImg from "./LandImg";
 import Menu from "./Menu";
 
-
 function LandingPage() {
+  return (
+    <div>
+      <Menu />
+      <LandImg />
+    </div>
+  );
+}
 
-
-
-
-
-    return (
-      <div>
-        <Menu />
-        <LandImg />
-      </div>
-    );
-  }
-  
-  export default LandingPage;
+export default LandingPage;

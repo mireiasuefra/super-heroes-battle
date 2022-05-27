@@ -1,7 +1,7 @@
 .landing {
   background-color:$color-terciary;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,6 +13,13 @@
    max-width: 900px;
    min-width: 200px;
    width: 90%;
-
+   margin-bottom: 30px;
   }
+
+  &__text {
+    color: $color-principal;
+    max-width: 300px;
+
+ 
+   }
 }
