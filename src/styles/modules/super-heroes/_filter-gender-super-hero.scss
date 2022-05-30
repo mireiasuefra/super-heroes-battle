@@ -20,6 +20,7 @@
   &__select-search-gender {
     color: $color-secondary;
     padding: 6px;
+    cursor: pointer;
 
     @media (min-width: $breakpoint-tablet) {
       padding-left: 15px;

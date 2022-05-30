@@ -1,5 +1,5 @@
 .landing {
-  background-color:$color-terciary;
+  background: url(../../../images/bricks.jpg);
   padding-top: 50px;
   padding-bottom: 80px;
   display: flex;
@@ -8,21 +8,19 @@
   justify-content: center;
   text-align: center;
 
-
   &__img {
-   max-width: 900px;
-   min-width: 200px;
-   width: 90%;
-   margin-bottom: 40px;
-   box-shadow: 0 8px 8px 0 rgba(223, 222, 174, 0.356);
-   border-radius: 10px;
+    max-width: 900px;
+    min-width: 200px;
+    width: 90%;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 10px 0 $color-secondary;
+    border-radius: 10px;
   }
 
   &__text {
     color: $color-principal;
     max-width: 300px;
-    line-height: 22px;
-
- 
-   }
+    line-height: 25px;
+    font-size: 18px;
+  }
 }

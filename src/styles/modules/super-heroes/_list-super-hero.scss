@@ -1,10 +1,8 @@
 .list-super-hero {
-  background-color: lightcoral;
   border-radius: 10px;
   padding: 3px;
   margin: 5px;
   text-align: center;
-   
 
   &__list {
     display: flex;
@@ -13,17 +11,31 @@
     margin: 10px;
   }
 
-  &__image {
-    width: 100%;
-    height: 290px;
-    border-radius: 10px;
-  }
-
-  &__list-item{
+  &__list-item {
     margin: 10px;
+    cursor: pointer;
+    &:hover {
+      border: 2px solid $color-secondary;
+    }
   }
 
+  &__image {
+    height: 190px;
+    border-radius: 10px;
+    margin: 10px;
 
+    @media (min-width: $breakpoint-tablet) {
+      height: 290px;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-secondary;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 16px;
+    }
+  }
 }
-
-
