@@ -1,12 +1,5 @@
-import Menu from "../landing/Menu";
-
 function SuperHeroPage() {
-  return (
-    <div>
-        Página SuperHero
-        <Menu />
-    </div>
-  );
+  return <div>Página SuperHero</div>;
 }
 
 export default SuperHeroPage;

@@ -1,7 +1,9 @@
 function FilterNameSuperHero(props) {
-    return (
-      <div className="filter-name-superHero">
-      {/* <label className="filter-name-character__serch-superHero" htmlFor="name">
+
+  
+  return (
+    <div className="filter-name-superHero">
+      <label className="filter-name-character__serch-superHero" htmlFor="name">
         Busca por Super Heroe:
       </label>
       <input
@@ -10,11 +12,11 @@ function FilterNameSuperHero(props) {
         name="name"
         id="name"
         placeholder="Busca tu Super Heroe"
-        value={props.filterCharacters}
-        onChange={props.handleSearchFilterCharacter}
-      /> */}
+        value={props.filterNameSuperHero}
+        onChange={props.handleSearchFilterNameSuperHero}
+      />
     </div>
-    );
-  }
-  
-  export default FilterNameSuperHero;
+  );
+}
+
+export default FilterNameSuperHero;

@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import ls from "../../services/localstorage";
 import callToApi from "../../services/api-list";
-import Menu from "../landing/Menu";
 
-//import FilterNameSuperHero from "./FilterNameSuperHero";
-//import FilterGenderSuperHero from "./FilterGenderSuperHero";
+import FilterNameSuperHero from "./FilterNameSuperHero";
+import FilterGenderSuperHero from "./FilterGenderSuperHero";
 //import FilterRaceSuperHero from "./FilterRaceSuperHero";
 //import ButtonReset from "./ButtonReset";
 import ListSuperHero from "./ListSuperHero";
@@ -12,7 +11,9 @@ import ListSuperHero from "./ListSuperHero";
 function SuperHeroesPage() {
   // Variables ESTADO:
 
-  const [superHeros, setSuperHeros] = useState(ls.get("superHero", []));
+  const [superHeros, setSuperHeros] = useState([]);
+  const [filterNameSuperHero, setFilterNameSuperHero] = useState('');
+  const [filterGenderSuperHero, setfilterGenderSuperHero] = useState('all');
 
   // Llamada a la API:
   useEffect(() => {
@@ -23,15 +24,10 @@ function SuperHeroesPage() {
   }, []);
 
   /*
-  const [filterNameSuperHero, setFilterNameSuperHero] = useState(
-    ls.get("filterSuperHero", "")
-  );
-  const [filterGenderSuperHero, setfilterGenderSuperHero] = useState(
-    ls.get("filterGenderSuperHero", "")
-  );
   const [filterRaceSuperHero, setfilterRaceSuperHero] = useState(
     ls.get("filterRaceSuperHero", "")
   );
+    */
 
   //Para buscar por nombre superHero:
   const handleSearchFilterNameSuperHero = (ev) => {
@@ -43,6 +39,7 @@ function SuperHeroesPage() {
     setfilterGenderSuperHero(ev.currentTarget.value);
   };
 
+  /*
   //Para buscar por raza superHero:
   const handleSearchFilterRaceSuperHero = (ev) => {
     setfilterRaceSuperHero(ev.currentTarget.value);
@@ -51,18 +48,23 @@ function SuperHeroesPage() {
 
   return (
     <div>
+      <form onSubmit={(ev) => ev.preventDefault()}>
+        <FilterNameSuperHero
+          filterNameSuperHero={filterNameSuperHero}
+          handleSearchFilterNameSuperHero={handleSearchFilterNameSuperHero}
+        />
+        <FilterGenderSuperHero
+          filterGenderSuperHero={filterGenderSuperHero}
+          handleSearchFilterGenderSuperHero={handleSearchFilterGenderSuperHero}
+        />
+      </form>
+
       {/*
-         <form onSubmit={(ev) => ev.preventDefault()}>
+         
 
-        <FilterNameSuperHero 
-        filterNameSuperHero={filterNameSuperHero}
-        handleSearchFilterNameSuperHero={handleSearchFilterNameSuperHero}
-        />
+        
 
-        <FilterGenderSuperHero 
-        filterGenderSuperHero={filterGenderSuperHero}
-        handleSearchFilterGenderSuperHero={handleSearchFilterGenderSuperHero}
-        />
+
 
         <FilterRaceSuperHero 
         filterRaceSuperHero={filterRaceSuperHero}
@@ -71,10 +73,13 @@ function SuperHeroesPage() {
 
         <ButtonReset />
 
-      </form>
+     
   */}
-      <Menu />
-      <ListSuperHero superHeros={superHeros} />
+      <ListSuperHero
+        superHeros={superHeros}
+        filterNameSuperHero={filterNameSuperHero}
+        filterGenderSuperHero={filterGenderSuperHero}
+      />
     </div>
   );
 }
