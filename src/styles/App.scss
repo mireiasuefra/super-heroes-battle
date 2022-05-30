@@ -3,6 +3,8 @@
 @import "components/app";
 @import "components/header";
 @import "components/menu";
-@import "components/landing";
-@import "components/list-super-hero";
+@import "modules/landing/landing";
+@import "modules/super-heroes/list-super-hero";
+@import "modules/super-heroes/filter-name-super-hero";
+@import "modules/super-heroes/filter-gender-super-hero";
 @import "components/footer";

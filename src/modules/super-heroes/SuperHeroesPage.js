@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import ls from "../../services/localstorage";
 import callToApi from "../../services/api-list";
 
 import FilterNameSuperHero from "./FilterNameSuperHero";
 import FilterGenderSuperHero from "./FilterGenderSuperHero";
-//import FilterRaceSuperHero from "./FilterRaceSuperHero";
 //import ButtonReset from "./ButtonReset";
 import ListSuperHero from "./ListSuperHero";
 
@@ -23,11 +21,7 @@ function SuperHeroesPage() {
     //cada vez que cambia la variable filterHouseCharacters se ejecuta lo que hay dentro del useEffect: la llamada a la api, utilizando el  filterHouseCharacters como parámetro
   }, []);
 
-  /*
-  const [filterRaceSuperHero, setfilterRaceSuperHero] = useState(
-    ls.get("filterRaceSuperHero", "")
-  );
-    */
+
 
   //Para buscar por nombre superHero:
   const handleSearchFilterNameSuperHero = (ev) => {
@@ -39,12 +33,7 @@ function SuperHeroesPage() {
     setfilterGenderSuperHero(ev.currentTarget.value);
   };
 
-  /*
-  //Para buscar por raza superHero:
-  const handleSearchFilterRaceSuperHero = (ev) => {
-    setfilterRaceSuperHero(ev.currentTarget.value);
-  };
-  */
+
 
   return (
     <div>
@@ -60,16 +49,9 @@ function SuperHeroesPage() {
       </form>
 
       {/*
-         
-
-        
+              
 
 
-
-        <FilterRaceSuperHero 
-        filterRaceSuperHero={filterRaceSuperHero}
-        handleSearchFilterRaceSuperHero={handleSearchFilterRaceSuperHero}
-        />
 
         <ButtonReset />
 

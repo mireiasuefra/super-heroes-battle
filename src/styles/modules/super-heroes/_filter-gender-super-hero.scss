@@ -1,0 +1,28 @@
+.filter-gender-superHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+  }
+
+  &__search-gender {
+    color: $color-principal;
+    padding: 15px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-left: 15px;
+    }
+  }
+
+  &__select-search-gender {
+    color: $color-secondary;
+    padding: 6px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-left: 15px;
+    }
+  }
+}

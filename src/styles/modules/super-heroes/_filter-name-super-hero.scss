@@ -1,0 +1,26 @@
+.filter-name-superHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+  }
+
+  &__serch-superHero {
+    color: $color-principal;
+    padding: 15px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-left: 15px;
+    }
+  }
+
+  &__input-serch-superHero {
+    color: $color-secondary;
+    text-align: center;
+    padding: 6px;
+  }
+}
