@@ -1,4 +1,4 @@
-import logoHeader from "../images/logo-header.JPG";
+import logoHeader from "../images/logo-header2.JPG";
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
 

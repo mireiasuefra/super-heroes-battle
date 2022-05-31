@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(../../images/bricks.jpg);
+    background-color: $color-secondary;
     min-width: 100px;
 
     @media (min-width: $breakpoint-tablet) {
@@ -12,15 +12,21 @@
 
     &__item {
         cursor: pointer;
-        margin-top: 20px;
+        padding-top: 6px;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding-top: 0px;
+        }
+
       
 
         & a {
             text-decoration: none;
-            color: $color-secondary;
+            color: $color-terciary;
             font-size: 18px;
+            
             &:hover {
-                border-bottom: 2px solid $color-secondary;
+                border-bottom: 2px solid $color-terciary;
             }
         }
     }

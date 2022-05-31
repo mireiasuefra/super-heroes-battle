@@ -1,4 +1,4 @@
-import logoFooter from "../images/logomireia.JPG";
+import logoFooter from "../images/logo-footer.JPG";
 function Footer() {
   return (
     <>
