@@ -3,15 +3,15 @@ import callToApi from "../../services/api-list";
 
 import FilterNameSuperHero from "./FilterNameSuperHero";
 import FilterGenderSuperHero from "./FilterGenderSuperHero";
-//import ButtonReset from "./ButtonReset";
+import ButtonReset from "./ButtonReset";
 import ListSuperHero from "./ListSuperHero";
 
 function SuperHeroesPage() {
   // Variables ESTADO:
 
   const [superHeros, setSuperHeros] = useState([]);
-  const [filterNameSuperHero, setFilterNameSuperHero] = useState('');
-  const [filterGenderSuperHero, setfilterGenderSuperHero] = useState('all');
+  const [filterNameSuperHero, setFilterNameSuperHero] = useState("");
+  const [filterGenderSuperHero, setfilterGenderSuperHero] = useState("all");
 
   // Llamada a la API:
   useEffect(() => {
@@ -20,8 +20,6 @@ function SuperHeroesPage() {
     });
     //cada vez que cambia la variable filterHouseCharacters se ejecuta lo que hay dentro del useEffect: la llamada a la api, utilizando el  filterHouseCharacters como parámetro
   }, []);
-
-
 
   //Para buscar por nombre superHero:
   const handleSearchFilterNameSuperHero = (ev) => {
@@ -32,8 +30,6 @@ function SuperHeroesPage() {
   const handleSearchFilterGenderSuperHero = (ev) => {
     setfilterGenderSuperHero(ev.currentTarget.value);
   };
-
-
 
   return (
     <div>
@@ -46,17 +42,11 @@ function SuperHeroesPage() {
           filterGenderSuperHero={filterGenderSuperHero}
           handleSearchFilterGenderSuperHero={handleSearchFilterGenderSuperHero}
         />
+        <ButtonReset 
+        setFilterNameSuperHero={setFilterNameSuperHero}
+        setfilterGenderSuperHero={setfilterGenderSuperHero}
+        />
       </form>
-
-      {/*
-              
-
-
-
-        <ButtonReset />
-
-     
-  */}
       <ListSuperHero
         superHeros={superHeros}
         filterNameSuperHero={filterNameSuperHero}
