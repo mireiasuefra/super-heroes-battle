@@ -4,6 +4,7 @@
     align-items: center;
     background-color: $color-secondary;
     min-width: 100px;
+    
 
     @media (min-width: $breakpoint-tablet) {
         flex-direction: row;

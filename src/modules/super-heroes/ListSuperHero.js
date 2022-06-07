@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ListSuperHero(props) {
   const renderSuperHero = () => {
     const superHeroFiltered = props.superHeros
@@ -16,14 +18,16 @@ function ListSuperHero(props) {
     if (superHeroFiltered.length > 0) {
       return superHeroFiltered.map((oneSuperHero) => {
         return (
-          <li className="list-super-hero__list-item" key={oneSuperHero.id}>
-            <img
-              className="list-super-hero__image"
-              src={oneSuperHero.images.sm}
-              alt={oneSuperHero.name}
-            ></img>
-            <p className="list-super-hero__name">{oneSuperHero.name}</p>
-          </li>
+          <Link to={`/super-hero/${oneSuperHero.id}`} key={oneSuperHero.id}>
+            <li className="list-super-hero__list-item">
+              <img
+                className="list-super-hero__image"
+                src={oneSuperHero.images.sm}
+                alt={oneSuperHero.name}
+              />
+              <p className="list-super-hero__name">{oneSuperHero.name}</p>
+            </li>
+          </Link>
         );
       });
     } else {

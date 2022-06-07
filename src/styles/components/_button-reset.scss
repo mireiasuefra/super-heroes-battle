@@ -1,23 +1,23 @@
 .reset {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 
-    &__button {
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        border-radius: 6px;
-        border: none;
-        background-color: $color-secondary;
-        color: $color-terciary;
-        font-family: $principal-font;
-        font-size: 20px;
-        cursor: pointer;
-        &:hover {
-            background-color: $color-secondary-dark;
-          } 
+  &__button {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 6px;
+    border: none;
+    background-color: $color-secondary;
+    color: $color-terciary;
+    font-family: $principal-font;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-secondary-dark;
     }
+  }
 }

@@ -11,6 +11,8 @@ import BattlePage from "../modules/battle/BattlePage";
 import LandingPage from "../modules/landing/LandingPage";
 import SuperHeroPage from "../modules/super-hero/SuperHeroPage";
 import SuperHeroesPage from "../modules/super-heroes/SuperHeroesPage";
+import ContactPage from "../modules/contact/ContactPage";
+
 
 function App() {
   return (
@@ -30,6 +32,10 @@ function App() {
 
           <Route path="/super-heroes">
             <SuperHeroesPage/>
+          </Route>
+
+          <Route path="/email">
+            <ContactPage />
           </Route>
 
           <Route path="/super-hero/:id">

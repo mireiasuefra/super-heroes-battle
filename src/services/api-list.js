@@ -10,6 +10,8 @@ const callToApi = () => {
           name: oneSuperHero.name,
           images: oneSuperHero.images,
           gender: oneSuperHero.appearance.gender,
+          work: oneSuperHero.work.occupation,
+          powerstats: oneSuperHero.powerstats,
         };
       });
     });
