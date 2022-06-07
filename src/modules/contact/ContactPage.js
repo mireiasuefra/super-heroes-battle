@@ -1,14 +1,11 @@
 function ContactPage() {
   return (
-    <form
-      action="https://formspree.io/"
-      method="post"
-      className="form"
-    >
+    <form action="https://formspree.io/" method="post" className="form">
       <label htmlFor="name" className="form__label">
         Nombre y Apellidos
       </label>
       <input
+        className="form__input"
         type="text"
         name="name"
         id="name"
@@ -20,6 +17,7 @@ function ContactPage() {
         Email
       </label>
       <input
+        className="form__input"
         type="email"
         name="email"
         id="email"
@@ -29,7 +27,12 @@ function ContactPage() {
       <label htmlFor="message" className="form__label">
         Mensaje
       </label>
-      <textarea name="message" id="message" required></textarea>
+      <textarea
+        className="form__input"
+        name="message"
+        id="message"
+        required
+      ></textarea>
 
       <button className="form__btn" type="submit" name="submit" id="submit ">
         Enviar
