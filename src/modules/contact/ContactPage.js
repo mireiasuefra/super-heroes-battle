@@ -1,6 +1,6 @@
 function ContactPage() {
   return (
-    <form action="https://formspree.io/" method="post" className="form">
+    <form name="contact" className="form" netlify>
       <label htmlFor="name" className="form__label">
         Nombre y Apellidos
       </label>
