@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import callToApi from "../../services/api-list";
+import { useState } from "react";
+import { useSelector } from 'react-redux'
 
 import FilterNameSuperHero from "./FilterNameSuperHero";
 import FilterGenderSuperHero from "./FilterGenderSuperHero";
@@ -7,19 +7,9 @@ import ButtonReset from "./ButtonReset";
 import ListSuperHero from "./ListSuperHero";
 
 function SuperHeroesPage() {
-  // Variables ESTADO:
-
-  const [superHeros, setSuperHeros] = useState([]);
+  const superHeroes = useSelector((state) => state.superHeroReducer.superHeroes);
   const [filterNameSuperHero, setFilterNameSuperHero] = useState("");
   const [filterGenderSuperHero, setfilterGenderSuperHero] = useState("all");
-
-  // Llamada a la API:
-  useEffect(() => {
-    callToApi().then((response) => {
-      setSuperHeros(response);
-    });
-    //cada vez que cambia la variable filterHouseCharacters se ejecuta lo que hay dentro del useEffect: la llamada a la api, utilizando el  filterHouseCharacters como parámetro
-  }, []);
 
   //Para buscar por nombre superHero:
   const handleSearchFilterNameSuperHero = (ev) => {
@@ -48,7 +38,7 @@ function SuperHeroesPage() {
         />
       </form>
       <ListSuperHero
-        superHeros={superHeros}
+        superHeroes={superHeroes}
         filterNameSuperHero={filterNameSuperHero}
         filterGenderSuperHero={filterGenderSuperHero}
       />

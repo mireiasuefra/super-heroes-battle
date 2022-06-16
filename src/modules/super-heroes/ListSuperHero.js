@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function ListSuperHero(props) {
   const renderSuperHero = () => {
-    const superHeroFiltered = props.superHeros
+    const superHeroesFiltered = props.superHeroes
       .filter((oneSuperHero) => {
         return oneSuperHero.name
           .toLowerCase()
@@ -15,8 +15,8 @@ function ListSuperHero(props) {
               props.filterGenderSuperHero;
       });
 
-    if (superHeroFiltered.length > 0) {
-      return superHeroFiltered.map((oneSuperHero) => {
+    if (superHeroesFiltered.length > 0) {
+      return superHeroesFiltered.map((oneSuperHero) => {
         return (
           <Link to={`/super-hero/${oneSuperHero.id}`} key={oneSuperHero.id}>
             <li className="list-super-hero__list-item">

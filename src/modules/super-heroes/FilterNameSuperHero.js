@@ -1,5 +1,4 @@
 function FilterNameSuperHero(props) {
-
   
   return (
     <div className="filter-name-superHero">

@@ -1,9 +1,9 @@
 import "../styles/App.scss";
-//import { useEffect, useState } from "react";
-//import callToApi from "../services/api";
-//import ls from '../services/localstorage';
-
+import { useEffect } from "react";
+import { useDispatch } from 'react-redux'
 import { Route, Switch } from "react-router-dom";
+import callToApi from "./../services/api-list";
+import { addSuperHeroes } from "./../store/actions/super-heroes";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -15,6 +15,15 @@ import ContactPage from "../modules/contact/ContactPage";
 
 
 function App() {
+  const dispatch = useDispatch()
+  
+  // Llamada a la API:
+  useEffect(() => {
+    callToApi().then((response) => {
+      dispatch(addSuperHeroes(response));
+    });
+  }, [dispatch]);
+
   return (
     // HTML ✨
 

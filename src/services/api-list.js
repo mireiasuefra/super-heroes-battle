@@ -9,7 +9,7 @@ const callToApi = () => {
           id: oneSuperHero.id,
           name: oneSuperHero.name,
           images: oneSuperHero.images,
-          gender: oneSuperHero.appearance.gender,
+          appearance: oneSuperHero.appearance,
           work: oneSuperHero.work.occupation,
           powerstats: oneSuperHero.powerstats,
         };
