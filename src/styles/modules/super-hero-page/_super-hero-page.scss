@@ -3,33 +3,52 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align:justify;
-
-  @media (min-width: $breakpoint-tablet) {
-    flex-direction: row;
-  }
+  text-align: justify;
+  margin-bottom: 30px;
 
   &__title {
-    color: $color-secondary;
+    color: $color-terciary;
+    background-color: $color-secondary;
+    padding: 6px;
     font-size: 22px;
-    margin-bottom: 15px;
     text-transform: uppercase;
-    text-align:center;
+    text-align: center;
+    margin-top: 40px;
+    width: 300px;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 600px;
+    }
   }
 
-  &__race {
-    color: $color-principal;
-    max-width: 600px;
-    font-size: 18px;
-  }
-
-  &__image {
+  &__card {
+    background-color: $color-terciary;
     max-width: 300px;
     min-width: 100px;
     width: 90%;
+    border: 3px solid $color-secondary;
+    border: 3px solid $color-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 10px 0 $color-secondary;
+
+    @media (min-width: $breakpoint-tablet) {
+      flex-direction: row;
+      max-width: 600px;
+    }
+  }
+
+  &__image {
+    max-width: 250px;
+    min-width: 100px;
+    width: 90%;
+    border: 3px solid $color-secondary;
     margin-bottom: 50px;
     margin-top: 60px;
-    box-shadow: 0 10px 10px 0 $color-secondary;
+    box-shadow: 0 5px 5px 0 $color-secondary;
     border-radius: 10px;
 
     @media (min-width: $breakpoint-tablet) {
@@ -39,9 +58,15 @@
 
   &__text {
     color: $color-principal;
+    text-align: justify;
     max-width: 300px;
-    line-height: 25px;
     font-size: 18px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    line-height: 30px;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 }

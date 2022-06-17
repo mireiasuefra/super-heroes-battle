@@ -11,11 +11,11 @@ function ListSuperHero(props) {
       .filter((oneSuperHero) => {
         return props.filterGenderSuperHero === "all"
           ? true
-          : oneSuperHero.gender.toLocaleLowerCase() ===
+          : oneSuperHero.appearance.gender.toLocaleLowerCase() ===
               props.filterGenderSuperHero;
       });
 
-    if (superHeroesFiltered.length > 0) {
+    if (superHeroesFiltered && superHeroesFiltered.length > 0) {
       return superHeroesFiltered.map((oneSuperHero) => {
         return (
           <Link to={`/super-hero/${oneSuperHero.id}`} key={oneSuperHero.id}>
@@ -33,7 +33,8 @@ function ListSuperHero(props) {
     } else {
       return (
         <p className="list-super-hero__not-found">
-          No hemos encontrado super héroes con ese nombre
+          No hemos encontrado súper héroes con ese nombre. No dudo que no lo
+          sea, simplemente no aparece en esta lista. ¡Prueba con otro!
         </p>
       );
     }

@@ -1,29 +1,35 @@
-import { useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom';
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
 function SuperHeroPage() {
   let { id } = useParams();
-  const superHero = useSelector((state) => state.superHeroReducer.superHeroes.find((oneSuperHero) => oneSuperHero.id.toString() === id));
+  const superHero = useSelector((state) =>
+    state.superHeroReducer.superHeroes.find(
+      (oneSuperHero) => oneSuperHero.id.toString() === id
+    )
+  );
 
   return superHero ? (
     <div className="super-hero-page">
+
+<h2 className="super-hero-page__title">{superHero.name} </h2>
+
+      <div className="super-hero-page__card">
       <img
         className="super-hero-page__image"
         src={superHero.images.md}
         alt={superHero.name}
       ></img>
-      <div>
-        <h2 className="super-hero-page__title">{superHero.name} </h2>
 
-        <p className="super-hero-page__text">
-          La raza de este súper héroe es: {superHero.appearance.race}. Se trata
-          de un personaje {superHero.appearance.gender} y tiene una fueza de{" "}
-          {superHero.powerstats.strength}%. Tiene una durabilidad de un {" "}
-          {superHero.powerstats.durability}% y un poder de combate del{" "}
-          {superHero.powerstats.combat}%. Su rapidez es del{" "}
-          {superHero.powerstats.speed}% y tiene un{" "}
-          {superHero.powerstats.intelligence}% de inteligencia.
-        </p>
+        <ul className="super-hero-page__text">
+          {superHero.appearance.race ? <li>Raza: {superHero.appearance.race}</li> : null }
+          <li> Genero: {superHero.appearance.gender}</li>
+          <li>Durabilidad: {superHero.powerstats.durability}%</li>
+          <li>Poder: {superHero.powerstats.combat}%.</li>
+          <li> Rapidez: {superHero.powerstats.speed}%</li>
+          <li>Inteligencia: {superHero.powerstats.intelligence}%</li>
+          <li>Fuerza: {superHero.powerstats.strength}%</li>
+        </ul>
       </div>
     </div>
   ) : null;
