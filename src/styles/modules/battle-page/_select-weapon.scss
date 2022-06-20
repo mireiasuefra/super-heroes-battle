@@ -1,0 +1,29 @@
+.select-weapon {
+  display: flex;
+  flex-direction: row;
+ 
+
+  
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: column;
+    padding:30px;
+  }
+  
+  &__weapon {
+    border-radius: 60px;
+    background-color: $color-principal;
+    color: $color-terciary;
+    border: 1px solid transparent;
+    font-size: 20px;
+    padding: 20px;
+    cursor: pointer;
+    margin: 5px;
+    
+
+    &:hover {
+      background-color: $color-terciary;
+      color: $color-principal;
+      border: 1px solid $color-secondary
+    }
+  }
+}

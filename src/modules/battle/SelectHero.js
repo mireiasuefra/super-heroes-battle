@@ -32,10 +32,11 @@ function SelectHero() {
       />
       <div>
         {superHero ? (
-          <p>Superhero seleccionado {superHero.name} </p>
-        ) : (
-          <p>Selecciona super heroe</p>
-        )}
+          <>
+            <p className="select-hero__selected">Superhero seleccionado: ¡{superHero.name}! </p>
+            <img className="select-hero__image" src={superHero.images.md} alt={superHero.name} />
+          </>
+        ) : null}
       </div>
     </div>
   );

@@ -11,7 +11,7 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 30px;
-}
+  }
 
   &__img {
     height: 80px;
@@ -31,12 +31,15 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
   }
 
   &__rrss-web {
     padding-left: 15px;
     color: $color-terciary;
     cursor: pointer;
+    
+    &:hover {
+      color: $color-principal;
+    }
   }
 }

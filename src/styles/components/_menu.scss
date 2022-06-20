@@ -1,34 +1,34 @@
 .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $color-secondary;
-    min-width: 100px;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-secondary;
+  min-width: 100px;
 
-    @media (min-width: $breakpoint-tablet) {
-        flex-direction: row;
-        justify-content: space-around;
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__item {
+    cursor: pointer;
+    background-color: $color-terciary;
+    color: $color-principal;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 5px;
+
+    &:hover {
+      background-color: $color-principal;
+      color: $color-terciary;
     }
 
-    &__item {
-        cursor: pointer;
-        padding-top: 6px;
-
-        @media (min-width: $breakpoint-tablet) {
-            padding-top: 0px;
-        }
-
-      
-
-        & a {
-            text-decoration: none;
-            color: $color-terciary;
-            font-size: 18px;
-            
-            &:hover {
-                border-bottom: 2px solid $color-terciary;
-            }
-        }
+    & a {
+      text-decoration: none;
+      color: inherit;
     }
+  }
 }
