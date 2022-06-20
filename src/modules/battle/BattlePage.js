@@ -1,12 +1,15 @@
+import { useSelector } from "react-redux";
+import SelectHero from "./SelectHero";
+
 function BattlePage() {
+  const superHeroes = useSelector(
+    (state) => state.superHeroReducer.superHeroes
+  );
+
   return (
-    <div>
-      Página Battle
-      {/*
-      <Fight />
-      <Hit />
-      <Counter />
-     */}
+    <div className="battle-page">
+      <SelectHero />
+      <SelectHero />
     </div>
   );
 }
