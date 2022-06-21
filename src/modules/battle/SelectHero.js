@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 
-function SelectHero() {
+function SelectHero(props) {
   const superHeroes = useSelector(
     (state) => state.superHeroReducer.superHeroes
   );
@@ -16,7 +16,8 @@ function SelectHero() {
   });
 
   const onChange = (event, option) => {
-    setSuperHero(option.superHero);
+    setSuperHero(option ? option.superHero : null);
+    props.onSelectSuperHero(option ? option.superHero : null);
   };
 
   return (
@@ -29,6 +30,7 @@ function SelectHero() {
           <TextField {...params} label="Elige tu super héroe" />
         )}
         onChange={onChange}
+        isOptionEqualToValue={(option, value) => option.id === value.id}
       />
       <div>
         {superHero ? (

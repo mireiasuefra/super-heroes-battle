@@ -1,19 +1,28 @@
-function SelectWeapon() {
+function SelectWeapon(props) {
 
-  const onClick = () => {
-    console.log('CLICK');
-  };
+  const onClick = (weapon) => {
+    props.onSelectWeapon(weapon);
+  }
 
   return (
-    <div className="select-weapon">
-      <button className="select-weapon__weapon">
-        <i className="fa fa-hand-rock" onClick={onClick}></i>
+    <div className="select-weapon" >
+      <button
+      onClick={() => onClick("strength")}
+        className="select-weapon__weapon"
+      >
+        <i className="fa fa-hand-rock"></i>
       </button>
-      <button className="select-weapon__weapon">
-        <i className="fas fa-brain" onClick={onClick}></i>
+      <button
+      onClick={() => onClick("intelligence")}
+        className="select-weapon__weapon"
+      >
+        <i className="fas fa-brain"></i>
       </button>
-      <button className="select-weapon__weapon">
-        <i className="fas fa-bolt" onClick={onClick}></i>
+      <button
+      onClick={() => onClick("speed")}
+        className="select-weapon__weapon"
+      >
+        <i className="fas fa-bolt"></i>
       </button>
     </div>
   );
