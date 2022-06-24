@@ -1,4 +1,4 @@
-import logoFooter from "../images/logo-footer.JPG";
+import logoFooter from "../images/footer-logo.JPG";
 import { Link } from "react-router-dom";
 
 function Footer() {
